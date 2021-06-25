@@ -2,6 +2,10 @@
 #include <Wire.h>
 #include <math.h>
 
+hw_timer_t * timer0 = NULL;
+portMUX_TYPE timerMux0 = portMUX_INITIALIZER_UNLOCKED;
+volatile uint8_t led0stat = 0;
+
 #define inEN 34     //CH1 end-stop
 #define inX1 35
 #define inX2 32
@@ -202,6 +206,14 @@ void rampCH1(){
   */
 }
 
+void IRAM_ATTR onTimer0(){
+  portENTER_CRITICAL_ISR(&timerMux0);
+  led0stat = 1 - led0stat;
+  digitalWrite(inLED, led0stat);
+  timerAlarmWrite(timer0, motor1_custom_delay, true);
+  portEXIT_CRITICAL_ISR(&timerMux0);
+}
+
 void setup() {
   // put your setup code here, to run once:
   pinMode(inEN,INPUT);
@@ -221,12 +233,18 @@ void setup() {
   pinMode(inLED,OUTPUT);
 
   Serial.begin(115200);
-  delay(5000);
+  Serial.println("starting timer0");
+  timer0 = timerBegin(0, 80, true);
+  timerAttachInterrupt(timer0, &onTimer0, true);
+  delay(8000);
+  timerAlarmWrite(timer0, 25000, true);
+  timerAlarmEnable(timer0);
+
 }
 
 void loop() {
   timerT1(); timerT2(); timerT3();
-    digitalWrite(inLED,offtimer_T2);
+    //digitalWrite(inLED,offtimer_T2);
 
   if(offtimer_T1){                    // pushbuttons and limit switches read
     bENABLE = !digitalRead(inEN);     // SPARE    
