@@ -318,7 +318,7 @@ void IRAM_ATTR onTimer0(){
     digitalWrite(CH1_STEP, led0stat);
     //AX1_pos_steps ++;
   }  
-  timerAlarmWrite(timer0, AX1_custom_delay, true);
+  timerAlarmWrite(timer0, abs(AX1_custom_delay), true);
   portEXIT_CRITICAL_ISR(&timerMux0);
 }
 
@@ -333,7 +333,7 @@ void IRAM_ATTR onTimer1(){
     digitalWrite(CH2_STEP, led1stat);
     //AX2_pos_steps ++;
   }
-  timerAlarmWrite(timer1, AX2_custom_delay, true);
+  timerAlarmWrite(timer1, abs(AX2_custom_delay), true);
   portEXIT_CRITICAL_ISR(&timerMux1);
 }
 
@@ -352,8 +352,7 @@ void setup() {
   pinMode(CH1_STEP,OUTPUT);
   pinMode(CH1_DIR,OUTPUT);
   pinMode(CH2_STEP,OUTPUT);
-  pinMode(CH2_DIR,OUTPUT);
-  
+  pinMode(CH2_DIR,OUTPUT);  
 
   Serial.begin(115200);
   Serial.println("starting timer0");
