@@ -3,9 +3,20 @@
 
 pohon dvou kamer na lineárním vedení HIVIN xxxxx.xxxxx pomocí krokových motorů NEMA17 (creality 42-40).
 Motory jsou řízeny drivery A4988 v režimu osminy kroku. Jako řídící člen je použita vývojová deska ESP-32S 30PIN DEVBOARD.
-https://www.neven.cz/kategorie/elektronicke-soucastky/elektronicky-vyvoj/vyvojove-desky/ostatni/esp-wroom-32-esp32-esp-32s-2-4ghz-vyvojarska-deska-s-wifi-bt/?gclid=Cj0KCQjw8IaGBhCHARIsAGIRRYpMeOdNHL77bcAWVx9MYroFuvjWJn9ZUfgzhU5GnOSlgwTvbVgduxgaAnCLEALw_wc
+Délka pojezdu je 2m, koncové spínače nebyly realizovány. Kamery mohou bourat do koncových poloh i do sebe navzájem.
+
+![IMG_20210807_165539](https://user-images.githubusercontent.com/53040547/130255840-9f4e6890-bccf-4933-99f1-3af9c84fe13d.jpg)
+
+NAPÁJENÍ:
+Pro napájení je použit zdroj AXIMA AXSP03P01 230VAC/24VDC/1,3A. Vstupní napětí 230VAC je vypínané hlavním vypínačem linky.
+Výstup zdroje je jištěn pojistkou 1A v pojistkovém odpínači.
+Napětí 24VDC napájí ovládací otočné přepínače umístěné na hlavním operátorském pultu a zároveň BOX s elektronikou pro pojezdy.
+V BOXu je 24VDC použito k napájení silové části driverů a napájení step-down měniče 24VDC/5,2VDC 2A s LM2596+LED.
+Mikrokontrolér je napájen stabilizátorem napětí 3,3V s AMS1117.
+[SLL_EDB_CAM-B_pojezd_kamery_nože.pdf](https://github.com/panMasinka/ESP32_linear_travel_v2/files/7022631/SLL_EDB_CAM-B_pojezd_kamery_noze.pdf)
 
 
+DRIVER:
 ![A4988-Stepper-Driver1](https://user-images.githubusercontent.com/53040547/130250913-9817a3c7-f182-4ff4-b56b-21a685e2d233.jpg)
 
 
