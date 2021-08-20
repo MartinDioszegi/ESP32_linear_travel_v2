@@ -42,6 +42,4 @@ Proud, který teče do motoru je na driveru A4988 nastaven referenčním napět�
 
 
 
-![IMG_20210807_165539](https://user-images.githubusercontent.com/53040547/130252245-057a3933-0a20-4ca8-b225-f1171dad420b.jpg)
-
 
