@@ -7,24 +7,28 @@ Délka pojezdu je 2m, koncové spínače nebyly realizovány. Kamery mohou boura
 
 ![IMG_20210807_165539](https://user-images.githubusercontent.com/53040547/130255840-9f4e6890-bccf-4933-99f1-3af9c84fe13d.jpg)
 
-NAPÁJENÍ:
+**NAPÁJENÍ:**
 Pro napájení je použit zdroj AXIMA AXSP03P01 230VAC/24VDC/1,3A. Vstupní napětí 230VAC je vypínané hlavním vypínačem linky.
 Výstup zdroje je jištěn pojistkou 1A v pojistkovém odpínači.
 Napětí 24VDC napájí ovládací otočné přepínače umístěné na hlavním operátorském pultu a zároveň BOX s elektronikou pro pojezdy.
 V BOXu je 24VDC použito k napájení silové části driverů a napájení step-down měniče 24VDC/5,2VDC 2A s LM2596+LED.
 Mikrokontrolér je napájen stabilizátorem napětí 3,3V s AMS1117.
+
+**SCHÉMA SPOJENÍ S LINKOU:**
 [SLL_EDB_CAM-B_pojezd_kamery_nože.pdf](https://github.com/panMasinka/ESP32_linear_travel_v2/files/7022631/SLL_EDB_CAM-B_pojezd_kamery_noze.pdf)
 
+**SCHÉMA PCB:**
+POZOR! nezapojovat R23 a R29. (LS1-OS a LS2-DS), ty nabíjí piny GPIO12 a GPIO13 a mikrokontroler potom nechce bootovat.
+Pro koncové snímače použít vstupy LS2 a LS3.
+Dále není ve schématu spojení pinů MS1,MS2 a Vcc u driverů motorů. Ty jsou tak ve full-step režimu.
+[Schematic_linear travel_2021-02-25.pdf](https://github.com/panMasinka/ESP32_linear_travel_v2/files/7022646/Schematic_linear.travel_2021-02-25.pdf)
 
-DRIVER:
+**DRIVER:**
 ![A4988-Stepper-Driver1](https://user-images.githubusercontent.com/53040547/130250913-9817a3c7-f182-4ff4-b56b-21a685e2d233.jpg)
-
-
 
 ![A4988-Specsifications](https://user-images.githubusercontent.com/53040547/129195844-558fbcbb-ea0c-4d48-9e05-0b6315cee30a.png)
 
-
-A4988 microstepping . . . . oproti schématu je potřeba propojit piny MS1 a MS2 s ovládacím napětím 3.3V
+**A4988 microstepping** . . . . oproti schématu je potřeba propojit piny MS1 a MS2 s ovládacím napětím 3.3V
 
 ![A4988-Truth-Table1-300x227](https://user-images.githubusercontent.com/53040547/130251128-a9126449-7a1e-4779-8c4f-b232dab754f4.png)
 
