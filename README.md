@@ -2,7 +2,9 @@
 
 
 pohon dvou kamer na lineárním vedení HIVIN xxxxx.xxxxx pomocí krokových motorů NEMA17 (creality 42-40).
-Motory jsou řízeny drivery A4988 v režimu osminy kroku.
+Motory jsou řízeny drivery A4988 v režimu osminy kroku. Jako řídící člen je použita vývojová deska ESP-32S 30PIN DEVBOARD.
+https://www.neven.cz/kategorie/elektronicke-soucastky/elektronicky-vyvoj/vyvojove-desky/ostatni/esp-wroom-32-esp32-esp-32s-2-4ghz-vyvojarska-deska-s-wifi-bt/?gclid=Cj0KCQjw8IaGBhCHARIsAGIRRYpMeOdNHL77bcAWVx9MYroFuvjWJn9ZUfgzhU5GnOSlgwTvbVgduxgaAnCLEALw_wc
+
 
 ![A4988-Stepper-Driver1](https://user-images.githubusercontent.com/53040547/130250913-9817a3c7-f182-4ff4-b56b-21a685e2d233.jpg)
 
