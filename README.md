@@ -55,5 +55,7 @@ Nižší napětí bude znamenat menší kroutící moment a není nijak na škod
 ![IMG_20210813_165621](https://user-images.githubusercontent.com/53040547/130252084-9be340fd-b79a-4346-9255-96255d503b58.jpg)
 
 
+DESKA PLOŠNÝCH SPOJŮ
+![PCB_detail](https://user-images.githubusercontent.com/53040547/130277593-4cf06fa2-3571-47ad-8a5d-1fbb3fd103ac.png)
 
 
