@@ -44,6 +44,7 @@ Na desce pojezd kamer okrajků je propojení pinů MS1, MS2 a Vcc řešeno pří
 ![IMG_20210625_210154](https://user-images.githubusercontent.com/53040547/130251799-0bc363d6-4420-4acf-bf98-9ba6ddc9ac32.jpg)
 
 Na náhradní desce je to řešeno přímo na PCB ze spodní strany.
+
 ![image29](https://user-images.githubusercontent.com/53040547/130277707-a6537a36-851a-4732-b6d4-ff662e314af6.png)
 
 
@@ -54,9 +55,12 @@ Pro motor NEMA17 42-40 je to Vref= 0,72V.
 Referenční napětí se nastavuje v klidovém stavu, kdy na vstupních svorkách X1-X4 ani na svorce EN není přítomno napětí. Tzn motory nejsou v záběru.
 Nižší napětí bude znamenat menší kroutící moment a není nijak na škodu. Vyšší napětí by mohlo poškodit driver nebo motor.
 
+![Vref_meas](https://user-images.githubusercontent.com/53040547/130278094-89ad0a81-b919-45b8-a20c-133b34e1ed79.png)
+
 
 
 DESKA PLOŠNÝCH SPOJŮ
+
 ![PCB_detail](https://user-images.githubusercontent.com/53040547/130277593-4cf06fa2-3571-47ad-8a5d-1fbb3fd103ac.png)
 
 
