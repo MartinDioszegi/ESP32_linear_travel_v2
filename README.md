@@ -5,7 +5,7 @@ pohon dvou kamer na lineárním vedení HIVIN xxxxx.xxxxx pomocí krokových mot
 Motory jsou řízeny drivery A4988 v režimu osminy kroku. Jako řídící člen je použita vývojová deska ESP-32S 30PIN DEVBOARD.
 Délka pojezdu je 2m, koncové spínače nebyly realizovány. Kamery mohou bourat do koncových poloh i do sebe navzájem.
 
-![image291](https://user-images.githubusercontent.com/53040547/130270983-a20f7181-8708-47e7-b174-15f252649765.png)
+![image18](https://user-images.githubusercontent.com/53040547/130271699-146104c1-0483-49fb-8483-abf60e550825.png)
 
 
 **NAPÁJENÍ:**
