@@ -24,14 +24,20 @@ Dále není ve schématu spojení pinů MS1,MS2 a Vcc u driverů motorů. Ty jso
 [Schematic_linear travel_2021-02-25.pdf](https://github.com/panMasinka/ESP32_linear_travel_v2/files/7022646/Schematic_linear.travel_2021-02-25.pdf)
 
 **DRIVER:**
+
 ![A4988-Stepper-Driver1](https://user-images.githubusercontent.com/53040547/130250913-9817a3c7-f182-4ff4-b56b-21a685e2d233.jpg)
 
 ![A4988-Specsifications](https://user-images.githubusercontent.com/53040547/129195844-558fbcbb-ea0c-4d48-9e05-0b6315cee30a.png)
 
+základní zapojení:
+V základním zapojení je driver řízen tak, že pin DIR určuje směr otáčení a pin STEP určuje rychlost. Každá náběžná hrana na pinu STEP znamená 1 krok, nebo 1 mikrokrok (podle zapojení pinů pro microstepping). Jeden celý krok je zmněna natočení hřídele o 1,8°.
+
+![0J10073 600](https://user-images.githubusercontent.com/53040547/130259376-980ae84f-a294-49f1-8cc2-cbf122744a32.jpg)
+
+
 **A4988 microstepping** . . . . oproti schématu je potřeba propojit piny MS1 a MS2 s ovládacím napětím 3.3V
 
 ![A4988-Truth-Table1-300x227](https://user-images.githubusercontent.com/53040547/130251128-a9126449-7a1e-4779-8c4f-b232dab754f4.png)
-
 
 Na desce pojezd kamer okrajků je propojení pinů MS1, MS2 a Vcc řešeno přímo na driveru
 ![IMG_20210625_210154](https://user-images.githubusercontent.com/53040547/130251799-0bc363d6-4420-4acf-bf98-9ba6ddc9ac32.jpg)
@@ -40,8 +46,11 @@ Na náhradní desce je to řešeno přímo na PCB ze spodní strany.
 ![IMG_20210813_171620](https://user-images.githubusercontent.com/53040547/130251877-6bb07aa9-28f8-46dc-b9a1-f1e012a12a42.jpg)
 
 
-NASTAVENÍ PRACOVNÍHO PROUDU MOTORŮ:
+**NASTAVENÍ PRACOVNÍHO PROUDU MOTORŮ:**
 Proud, který teče do motoru je na driveru A4988 nastaven referenčním napětím měřitelným mezi trimerem a nulou ovládacího napětí.
+Pro motor NEMA17 42-40 je to Vref= 0,72V.
+Referenční napětí se nastavuje v klidovém stavu, kdy na vstupních svorkách X1-X4 ani na svorce EN není přítomno napětí. Tzn motory nejsou v záběru.
+Nižší napětí bude znamenat menší kroutící moment a není nijak na škodu. Vyšší napětí by mohlo poškodit driver nebo motor.
 ![IMG_20210813_165621](https://user-images.githubusercontent.com/53040547/130252084-9be340fd-b79a-4346-9255-96255d503b58.jpg)
 
 
