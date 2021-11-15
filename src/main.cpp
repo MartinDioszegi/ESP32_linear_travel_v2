@@ -36,7 +36,7 @@ boolean bLS2 = false;
 boolean bLS3 = false;
 boolean bLS4 = false;
 
-boolean offtimer_T1 = false;// debounce pushbuttons, selectors - 20ms
+boolean offtimer_T1 = false;// debounce pushbuttons, selectors - 20ms a teď velkej test  . . . na řádek 39 doplnim koment
 unsigned long T1_millis = 0;    //debounce pushbuttons, selectors
 unsigned long T1_delay = 20;    // 20ms
 void timerT1(){
